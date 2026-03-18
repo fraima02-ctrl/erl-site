@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Reports – Equity Research Lab</title>
+  <meta name="description" content="In-depth company analysis and valuation reports by Equity Research Lab.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="erl-header">
+    <div class="erl-header__inner">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button class="erl-hamburger" id="erlMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="erlPanel">
+          <span class="erl-hamburger__line"></span>
+          <span class="erl-hamburger__line"></span>
+          <span class="erl-hamburger__line"></span>
+        </button>
+        <a href="index.html" class="erl-header__brand">Equity Research Lab</a>
+      </div>
+      <nav class="erl-header__nav">
+        <a href="index.html">Home</a>
+        <a href="reports.html" class="is-active">Reports</a>
+        <a href="articles.html">Articles</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="erl-backdrop" id="erlBackdrop"></div>
+
+  <nav class="erl-panel" id="erlPanel" role="navigation" aria-label="Main navigation" aria-hidden="true">
+    <div class="erl-panel__header">
+      <span class="erl-panel__logo">Equity Research Lab</span>
+      <button class="erl-panel__close" id="erlMenuClose" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="erl-panel__list">
+      <li class="erl-panel__item"><a href="index.html" class="erl-panel__link">Home</a></li>
+      <li class="erl-panel__item"><a href="reports.html" class="erl-panel__link">Reports</a></li>
+      <li class="erl-panel__item"><a href="articles.html" class="erl-panel__link">Articles</a></li>
+      <li class="erl-panel__item"><a href="team.html" class="erl-panel__link">Team</a></li>
+    </ul>
+    <div class="erl-panel__footer">
+      <a href="team.html" class="erl-panel__cta">Contact Us</a>
+    </div>
+  </nav>
+
+  <section class="erl-page-hero">
+    <div class="erl-page-hero__content">
+      <p class="erl-page-hero__label">Our Research</p>
+      <h1 class="erl-page-hero__title">Reports</h1>
+      <p class="erl-page-hero__desc">In-depth company analysis and valuation reports to help you understand market opportunities.</p>
+    </div>
+  </section>
+
+  <section class="erl-archive">
+    <div class="erl-container">
+      <div class="erl-post-grid">
+        <article class="erl-post-card erl-reveal">
+          <img class="erl-post-card__img" src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop" alt="Electric vehicle charging">
+          <div class="erl-post-card__body">
+            <h2 class="erl-post-card__title">The Future of Electric Vehicles: Market Analysis 2026</h2>
+            <time class="erl-post-card__date" datetime="2026-02-25">February 25, 2026</time>
+            <p class="erl-post-card__excerpt">An in-depth analysis of the electric vehicle market covering major players, technological advancements, supply chain dynamics, and valuation considerations for investors evaluating the EV sector in 2026.</p>
+            <a href="#" class="erl-post-card__read">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="erl-footer">
+    <p class="erl-footer__copy">Equity Research Lab – &copy; 2026 all rights reserved<br><a href="mailto:info@equityresearchlab.it">info@equityresearchlab.it</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
