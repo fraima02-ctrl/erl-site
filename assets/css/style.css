@@ -1,26 +1,27 @@
-/* ══════════════════════════════════════════════════════════
-   EQUITY RESEARCH LAB — Global Stylesheet
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+   EQUITY RESEARCH LAB ‚Äî Global Stylesheet
    Premium financial research site
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 
-/* ── CSS Variables ── */
+/* ‚îÄ‚îÄ CSS Variables ‚îÄ‚îÄ */
 :root {
-  --erl-navy:        #1a1f3d;
-  --erl-navy-deep:   #141732;
-  --erl-navy-light:  #242a50;
-  --erl-navy-card:   rgba(26, 31, 61, 0.85);
+  --erl-navy:        #273653;
+  --erl-navy-deep:   #1e2c45;
+  --erl-navy-light:  #314768;
+  --erl-navy-card:   rgba(39, 54, 83, 0.85);
   --erl-white:       #ffffff;
   --erl-white-soft:  rgba(255, 255, 255, 0.75);
   --erl-white-muted: rgba(255, 255, 255, 0.45);
   --erl-white-ghost: rgba(255, 255, 255, 0.06);
   --erl-gold:        #c9a96e;
   --erl-gold-soft:   rgba(201, 169, 110, 0.25);
-  --erl-blue-accent: #7b9cc7;
-  --erl-bg:          #0f1229;
-  --erl-border:      rgba(255, 255, 255, 0.08);
+  --erl-blue-accent: #78a6e4;
+  --erl-bg:          #273653;
+  --erl-border:      rgba(92, 122, 163, 0.59);
 
-  --erl-serif:  'Playfair Display', Georgia, 'Times New Roman', serif;
-  --erl-sans:   -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --erl-serif:  'Cinzel', Georgia, 'Times New Roman', serif;
+  --erl-display: 'DM Serif Display', Georgia, serif;
+  --erl-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   --erl-ease:        cubic-bezier(0.32, 0.72, 0, 1);
   --erl-ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
@@ -31,7 +32,7 @@
   --erl-gutter:      24px;
 }
 
-/* ── Reset ── */
+/* ‚îÄ‚îÄ Reset ‚îÄ‚îÄ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html {
   font-size: 16px;
@@ -52,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button { font-family: inherit; cursor: pointer; }
 
-/* ── Utility ── */
+/* ‚îÄ‚îÄ Utility ‚îÄ‚îÄ */
 .erl-container {
   width: 100%;
   max-width: var(--erl-max-w);
@@ -66,9 +67,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    HEADER
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -77,7 +78,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   padding: 0 clamp(20px, 4vw, 48px);
-  background: rgba(20, 23, 50, 0.85);
+  background: rgba(30, 44, 69, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--erl-border);
@@ -109,7 +110,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .erl-header__nav a {
   position: relative;
-  font-size: 14px;
+  font-family: var(--erl-display);
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--erl-white-soft);
@@ -138,9 +140,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    HAMBURGER
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-hamburger {
   display: none;
   flex-direction: column;
@@ -176,9 +178,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    MOBILE PANEL (slide from left)
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-backdrop {
   position: fixed; inset: 0;
   background: rgba(0, 0, 0, 0.55);
@@ -246,7 +248,7 @@ button { font-family: inherit; cursor: pointer; }
 .erl-panel__link {
   display: flex; align-items: center;
   width: 100%; padding: 16px 24px;
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: 22px; font-weight: 400;
   letter-spacing: 0.01em;
   color: var(--erl-white);
@@ -287,9 +289,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
-   HERO — Homepage
-   ══════════════════════════════════════════════════════════ */
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+   HERO ‚Äî Homepage
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-hero {
   position: relative;
   display: flex; flex-direction: column;
@@ -305,9 +307,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   position: absolute; inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 18, 41, 0.7) 0%,
-    rgba(26, 31, 61, 0.75) 50%,
-    rgba(15, 18, 41, 0.85) 100%
+    rgba(30, 44, 69, 0.7) 0%,
+    rgba(39, 54, 83, 0.75) 50%,
+    rgba(30, 44, 69, 0.85) 100%
   );
   z-index: 1;
 }
@@ -359,9 +361,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
-   PAGE HERO — Internal pages (Reports, Articles, Team)
-   ══════════════════════════════════════════════════════════ */
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+   PAGE HERO ‚Äî Internal pages (Reports, Articles, Team)
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-page-hero {
   position: relative;
   display: flex; flex-direction: column;
@@ -377,8 +379,8 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   position: absolute; inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 18, 41, 0.75) 0%,
-    rgba(26, 31, 61, 0.8) 100%
+    rgba(30, 44, 69, 0.75) 0%,
+    rgba(39, 54, 83, 0.8) 100%
   );
   z-index: 1;
 }
@@ -405,11 +407,15 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   color: var(--erl-white-soft);
   margin-top: 16px;
 }
+.erl-page-hero--team {
+  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop');
+  background-position: center 40%;
+}
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    BUTTONS
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-btn {
   display: inline-flex;
   align-items: center; gap: 10px;
@@ -454,16 +460,16 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
-   SECTION — Our Focus
-   ══════════════════════════════════════════════════════════ */
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+   SECTION ‚Äî Our Focus
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-section {
   padding: 100px 0;
 }
 .erl-section__title {
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: clamp(26px, 4vw, 40px);
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 60px;
   letter-spacing: 0.02em;
@@ -493,8 +499,8 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   color: var(--erl-blue-accent);
 }
 .erl-focus-card__title {
-  font-family: var(--erl-serif);
-  font-size: 20px; font-weight: 600;
+  font-family: var(--erl-display);
+  font-size: 20px; font-weight: 400;
   margin-bottom: 14px;
   letter-spacing: 0.01em;
 }
@@ -504,9 +510,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    COMMUNITY CTA SECTION
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-cta-section {
   position: relative;
   padding: 100px var(--erl-gutter);
@@ -517,7 +523,7 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 .erl-cta-section::before {
   content: '';
   position: absolute; inset: 0;
-  background: rgba(15, 18, 41, 0.8);
+  background: rgba(30, 44, 69, 0.8);
   z-index: 1;
 }
 .erl-cta-section__content {
@@ -526,9 +532,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   margin: 0 auto;
 }
 .erl-cta-section__title {
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: clamp(26px, 5vw, 42px);
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
@@ -540,9 +546,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    POST ARCHIVE (Reports / Articles)
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-archive {
   padding: 80px 0 100px;
 }
@@ -576,7 +582,7 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   justify-content: center;
 }
 .erl-post-card__title {
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600;
   color: var(--erl-blue-accent);
@@ -624,14 +630,14 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    TEAM SECTION
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-team {
   padding: 80px 0 100px;
 }
 .erl-team__title {
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: clamp(28px, 5vw, 42px);
   font-weight: 700;
   text-align: center;
@@ -666,7 +672,7 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   padding: 28px 24px 32px;
 }
 .erl-team-card__name {
-  font-family: var(--erl-serif);
+  font-family: var(--erl-display);
   font-size: 22px; font-weight: 600;
   margin-bottom: 6px;
 }
@@ -695,9 +701,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    FOOTER
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-footer {
   padding: 32px var(--erl-gutter);
   text-align: center;
@@ -716,9 +722,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 .erl-footer__copy a:hover { color: var(--erl-white); }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    SCROLL REVEAL ANIMATIONS
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 .erl-reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -733,9 +739,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
 .erl-reveal--delay-3 { transition-delay: 0.3s; }
 
 
-/* ══════════════════════════════════════════════════════════
+/* ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
    RESPONSIVE ADJUSTMENTS
-   ══════════════════════════════════════════════════════════ */
+   ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê */
 @media (max-width: 768px) {
   :root {
     --erl-header-h: 60px;
