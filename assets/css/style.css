@@ -529,6 +529,7 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   font-family: var(--erl-serif);
   font-size: clamp(26px, 5vw, 42px);
   font-weight: 700;
+  font-style: normal;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
 }
@@ -747,4 +748,9 @@ body.erl-menu-locked { overflow: hidden; position: fixed; width: 100%; }
   .erl-hero { min-height: 90vh; }
   .erl-page-hero { min-height: 320px; padding-top: calc(var(--erl-header-h) + 40px); }
   .erl-team-grid { gap: 24px; }
+}
+
+@media (max-width: 480px) {
+  .erl-hero__actions { flex-direction: column; align-items: center; }
+  .erl-btn { width: 100%; max-width: 280px; justify-content: center; }
 }
